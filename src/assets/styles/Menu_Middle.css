@@ -1,0 +1,47 @@
+.Middle-wraper {
+  width: 55%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.cricket-banner {
+  width: 100%;
+  height: 200px;
+  background-color: black;
+}
+.cricket-banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.Middle-wraper .slip-head {
+  background-color: #dddcd6;
+  margin-top: -25px;
+}
+
+.Highlights-Head {
+  width: 100%;
+  padding: 3px 2px 3px 10px;
+  background-color: #ffb80c;
+  font-family: sans-serif;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Highlights-Head h4 {
+  font-size: 13px;
+}
+
+.Highlights-Head p{
+    font-size: 11px;
+}
+
+.select select{
+    background-color: transparent;
+    width: 108px;
+    height: 23px;
+    padding-left: 9px;
+    color: inherit;
+    border-radius: 4px;
+}

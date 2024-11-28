@@ -1,0 +1,36 @@
+.bet_slip-wrap {
+  width: 26.0416666667%;
+  background-color: white;
+}
+
+.bet_slip-wrap h3 {
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(180deg, #2d4a5c 0%, #203846 100%);
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: sans-serif;
+  padding-left: 10px;
+  line-height: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.bet_slip-wrap h3:before {
+  position: absolute;
+  content: "";
+  top: 2px;
+  background: url(../../../public/expand_btn-lv2.png) no-repeat;
+  background-position: right;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  height: 20px;
+  width: 20px;
+  z-index: 99;
+  right: 0;
+}
+.noBetSlipInfo{
+    font-size: 13px;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 15px;
+}

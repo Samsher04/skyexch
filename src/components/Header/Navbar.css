@@ -1,0 +1,272 @@
+/* General Styling */
+.navbar {
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  color: #fff;
+}
+
+/* Top Navbar */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px;
+  background: #000;
+  background-image: linear-gradient(180deg, #383838 0%, #010101 100%);
+  height: 75px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f8c70c;
+  margin-left: 10px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 4px;
+  width: 280px;
+  position: relative;
+  height: 25px;
+}
+
+.search-icon {
+  color: #121212;
+  font-size: 16px;
+  left: 5px;
+  position: absolute;
+}
+
+.search-close {
+  color: #121212;
+  font-size: 16px;
+  right: 0px;
+  position: absolute;
+  height: 100%;
+  width: 25px;
+  background-color: #edeced;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: black;
+  padding: 5px;
+  font-size: 12px;
+  outline: none;
+  padding-left: 25px;
+}
+
+/* Auth Section */
+.auth-container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.auth-input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  color: black;
+  width: 130px;
+}
+
+.validation {
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 130px;
+}
+.validation input {
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+}
+
+.validation-number {
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  color: black;
+}
+
+.auth-btn {
+  padding: 0px 15px;
+  height: 25px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 12px;
+}
+
+.login-btn {
+  background-color: #e83523;
+  background-image: linear-gradient(-180deg, #f72424 0%, #bb1c00 100%);
+  color: white;
+}
+
+.login-btn svg {
+  font-size: 16px;
+}
+
+.signup-btn {
+  background-color: #666;
+  background-image: linear-gradient(-180deg, #666666 0%, #333333 100%);
+  color: white;
+}
+
+/* Bottom Navbar */
+.navbar-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px;
+  height: 30px;
+  background-image: linear-gradient(180deg, #ffcc2e 0%, #ffbd14 100%);
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  height: 30px;
+}
+
+
+.navbar-menu li a{
+  color: black;
+  text-decoration: none;
+  position: relative;
+  font-size: 13px;
+  color: black;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+  border-right: 1px solid #cc9a15;
+  padding: 0px 10px;
+}
+
+.navbar-menu li .active{
+  color: #000;
+  background: #ffdc7a;
+  box-shadow: inset 0 0px 5px 0 rgba(83, 33, 33, .5)
+
+}
+
+.badge {
+  color: white;
+  font-size: 12px;
+  min-width: 33px;
+  height: 12px;
+  position: absolute;
+  top: -5px;
+  right: 2px;
+  font-size: 10px;
+  line-height: 12px;
+  background-image: linear-gradient(180deg, #fb3434 0%, #e80505 100%);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .5);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.badge-text{
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.bach-box{
+    height: 100%;
+    width: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.time-zone {
+  font-size: 12px;
+  color: #634b08;
+}
+
+.btn-one-click {
+  background-color: #333;
+  color: #ffc21d;
+  padding: 0px 15px;
+  border-radius: 0px;
+  cursor: pointer;
+  height: 31px;
+  border: none;
+  margin-top: -3px;
+  font-weight: bold;
+  font-size: 12px;
+  border-top: 3px solid #ffc21d;
+}
+
+.settings {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.settings-icon {
+  font-size: 14px;
+}
+
+.logo_search_box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-section svg {
+  color: #f8c70c;
+  margin-right: 8px;
+  font-size: 13px;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+}
