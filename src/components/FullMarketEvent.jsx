@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../assets/styles/FullMarketEvent.css";
 import { BsPinFill } from "react-icons/bs";
 import { IoMdRefresh } from "react-icons/io";
@@ -6,8 +6,10 @@ import { MdAlarmOn } from "react-icons/md";
 import iconChart from "../../public/icon-chart.png";
 import btnaddpin from "../../public/btn-add-pin.png";
 import icon_irun from "../../public/icon-irun.png";
+import { AppContext } from "../Context/AppContext";
 
-// Match data object containing match odds and fancy bets
+
+
 const matchData = {
   matchOdds: [
     {
@@ -35,12 +37,25 @@ const matchData = {
 };
 
 const FullMarketEvent = () => {
+  const { setSelectedData, selectedData } = useContext(AppContext);
   const [activeTab, setActiveTab] = useState("Fancy");
   const [selectedValue, setSelectedValue] = useState(null);
   const [openMenu, setOpenMenu] = useState(null);
   const [activeToggle, setActiveToggle] = useState(null);
 
-  // Tab click handler to update active tab state
+  const handleDataClick = (teamName, odds, type) => {
+    setSelectedData({
+      teamName: teamName, 
+      odds: odds,   
+      oddsType: type,  
+    });
+    alert("clicked" + " " + type)
+  };
+
+  console.log("selected data", selectedData);
+  
+
+
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
@@ -143,13 +158,13 @@ const FullMarketEvent = () => {
                 </td>
                 {/* Back Odds */}
                 {team.back.map((odds, i) => (
-                  <td key={`back-${i}`}>
+                  <td key={`back-${i}`}  onClick={() => handleDataClick(team.team, odds, "Back")}>
                     {odds} <br /> <span style={{ fontSize: "8px" }}>1,646</span>
                   </td>
                 ))}
                 {/* Lay Odds */}
                 {team.lay.map((odds, i) => (
-                  <td key={`lay-${i}`}>
+                  <td key={`lay-${i}`} onClick={() => handleDataClick(team.team, odds, "Lay")}>
                     {odds} <br /> <span style={{ fontSize: "8px" }}>1,846</span>
                   </td>
                 ))}
