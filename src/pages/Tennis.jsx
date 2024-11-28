@@ -4,7 +4,7 @@ import Menu_select from "../components/Menu_select";
 import Menu_Middle from "../components/Menu_Middle";
 import Bet_slip from "../components/Bet_slip";
 
-const Cricket = () => {
+const Tennis = () => {
   const menuItems = [
     { title: "Sports", isHeader: true },
     { title: "All Sports", isHeader: false },
@@ -88,4 +88,4 @@ const Cricket = () => {
   );
 };
 
-export default Cricket;
+export default Tennis;

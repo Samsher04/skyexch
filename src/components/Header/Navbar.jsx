@@ -1,13 +1,23 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./Navbar.css";
 import { FaUser, FaCog } from "react-icons/fa";
 import { MdSearch, MdOutlineLogin } from "react-icons/md";
 import { HiXMark } from "react-icons/hi2";
 import Logo from "../../../public/logo.png";
 import Bach from "../../../public/wireless.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { AppContext } from "../../Context/AppContext";
 
 const Navbar = () => {
+  const {  setLoginOpen } = useContext(AppContext);
+  const userId = localStorage.getItem("userId");
+
+  const LoginModle = () => {
+    setLoginOpen(true)
+  };
+
+
+
   return (
     <div className="navbar">
       {/* Top Navbar */}
@@ -88,9 +98,17 @@ const Navbar = () => {
           <li>
             <NavLink to="/tennis">Tennis</NavLink>
           </li>
-          <li>
-            <NavLink to="/virtual-cricket">Virtual Cricket</NavLink>
-          </li>
+
+          {userId ? (
+            <li>
+              <NavLink to="/virtual-cricket">Virtual Cricket</NavLink>
+            </li>
+          ) : (
+            <li onClick={LoginModle}>
+              <Link>Virtual Cricket</Link>
+            </li>
+          )}
+
           <li>
             <NavLink to="/e-soccer">
               E-Soccer
