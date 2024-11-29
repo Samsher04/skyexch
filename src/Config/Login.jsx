@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import LoginBg from "../assets/images/loginbg.png";
 import { AppContext } from "../Context/AppContext";
 import "./LoginModal.css";
 import { RiLoginBoxLine } from "react-icons/ri";
