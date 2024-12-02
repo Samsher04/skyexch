@@ -16,6 +16,7 @@ import ESoccer from "./pages/ESoccer";
 import Kabaddi from "./pages/kabaddi";
 import VirtualCricket from "./pages/VirtualCricket";
 import Login from "./Config/Login";
+import MyAccount from "./pages/MyAccount";
 
 const App = () => {
   return (
@@ -44,6 +45,7 @@ const MainApp = () => {
         <Route path="e-soccer" element={<ESoccer />} />
         <Route path="kabaddi" element={<Kabaddi />} />
         <Route path="virtual-cricket" element={<VirtualCricket />} />
+        <Route path="myAccount" element={<MyAccount />} />
       </Routes>
 
       {loginOpen && <Login />}

@@ -7,8 +7,7 @@ import iconChart from "../../public/icon-chart.png";
 import btnaddpin from "../../public/btn-add-pin.png";
 import icon_irun from "../../public/icon-irun.png";
 import { AppContext } from "../Context/AppContext";
-
-
+import Cookies from "js-cookie";
 
 const matchData = {
   matchOdds: [
@@ -44,17 +43,32 @@ const FullMarketEvent = () => {
   const [activeToggle, setActiveToggle] = useState(null);
 
   const handleDataClick = (teamName, odds, type) => {
-    setSelectedData({
-      teamName: teamName, 
-      odds: odds,   
-      oddsType: type,  
-    });
-    alert("clicked" + " " + type)
+    const newData = {
+      teamName: teamName,
+      odds: odds,
+      oddsType: type,
+    };
+
+    const existingData = Cookies.get("selectedData");
+    const dataArray = existingData ? JSON.parse(existingData) : [];
+
+    const isDuplicate = dataArray.some(
+      (item) =>
+        item.teamName === newData.teamName &&
+        item.odds === newData.odds &&
+        item.oddsType === newData.oddsType
+    );
+
+    if (!isDuplicate) {
+      dataArray.push(newData);
+
+      Cookies.set("selectedData", JSON.stringify(dataArray));
+
+      setSelectedData(newData);
+    } else {
+      console.log("Duplicate data, not saving.");
+    }
   };
-
-  console.log("selected data", selectedData);
-  
-
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
@@ -158,13 +172,19 @@ const FullMarketEvent = () => {
                 </td>
                 {/* Back Odds */}
                 {team.back.map((odds, i) => (
-                  <td key={`back-${i}`}  onClick={() => handleDataClick(team.team, odds, "Back")}>
+                  <td
+                    key={`back-${i}`}
+                    onClick={() => handleDataClick(team.team, odds, "Back")}
+                  >
                     {odds} <br /> <span style={{ fontSize: "8px" }}>1,646</span>
                   </td>
                 ))}
                 {/* Lay Odds */}
                 {team.lay.map((odds, i) => (
-                  <td key={`lay-${i}`} onClick={() => handleDataClick(team.team, odds, "Lay")}>
+                  <td
+                    key={`lay-${i}`}
+                    onClick={() => handleDataClick(team.team, odds, "Lay")}
+                  >
                     {odds} <br /> <span style={{ fontSize: "8px" }}>1,846</span>
                   </td>
                 ))}
@@ -287,7 +307,10 @@ const FullMarketEvent = () => {
                         <div className="checkbox-section-main">
                           <div className="checkbox-section">
                             <input type="checkbox" id={`acceptOdds-${index}`} />
-                            <label htmlFor={`acceptOdds-${index}`} style={{fontWeight:"400"}}>
+                            <label
+                              htmlFor={`acceptOdds-${index}`}
+                              style={{ fontWeight: "400" }}
+                            >
                               Accept Any Odds
                             </label>
                           </div>

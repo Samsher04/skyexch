@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { FaUser, FaCog } from "react-icons/fa";
 import { MdSearch, MdOutlineLogin } from "react-icons/md";
@@ -7,16 +7,41 @@ import Logo from "../../../public/logo.png";
 import Bach from "../../../public/wireless.svg";
 import { NavLink, Link } from "react-router-dom";
 import { AppContext } from "../../Context/AppContext";
+import { IoMdRefresh } from "react-icons/io";
+import { FaUserAlt } from "react-icons/fa";
+import { RiArrowDownSFill, RiLogoutBoxRLine } from "react-icons/ri";
 
 const Navbar = () => {
-  const {  setLoginOpen } = useContext(AppContext);
+  const { setLoginOpen } = useContext(AppContext);
   const userId = localStorage.getItem("userId");
+  const [menu, setMenu] = useState(false);
 
-  const LoginModle = () => {
-    setLoginOpen(true)
+  const handaleToggle = () => {
+    if(menu==false){
+      setMenu(true);
+    }
+    else{
+      setMenu(false);
+    }
   };
 
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
+  const handleLogin = () => {
+    if (username && password) {
+      localStorage.setItem("userId", "12345");
+      alert("Login successful!");
+      setUsername("");
+      setPassword("");
+    } else {
+      alert("Please enter both username and password.");
+    }
+  };
+
+  const LoginModle = () => {
+    setLoginOpen(true);
+  };
 
   return (
     <div className="navbar">
@@ -36,29 +61,93 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="auth-container">
-          <div className="user-section">
-            <FaUser className="user-icon" />
-            <input type="text" placeholder="Username" className="auth-input" />
+        {userId ? (
+          <div className="account-wrap">
+            <div className="main-wallet">
+              <a href="">
+                Main Balance{" "}
+                <b style={{ marginLeft: "4px", marginRight: "4px" }}>IR 0.00</b>{" "}
+                Exposure{" "}
+                <b style={{ marginLeft: "4px", marginRight: "4px" }}>0.00</b>
+                <span>
+                  +<b>4</b>
+                </span>
+                <button>
+                  <IoMdRefresh />
+                </button>
+              </a>
+            </div>
+
+            <div className="my-account">
+              <button onClick={handaleToggle}>
+                <FaUserAlt /> My Account <RiArrowDownSFill />
+                {menu && (
+                  <div className="my-account-doropdown">
+                    <ul>
+                      <h4>
+                        Shamsher <span className="sp1">Demo</span>
+                        <span className="sp2">GMT+530</span>
+                      </h4>
+                      <li>
+                        <a href="/myAccount">My Profile</a>
+                      </li>
+                      <li>
+                        <a href="">Balance Overview</a>
+                      </li>
+                      <li>
+                        <a href="">Account Statement</a>
+                      </li>
+                      <li>
+                        <a href="">My Bets</a>
+                      </li>
+                      <li>
+                        <a href="">Bets History</a>
+                      </li>
+                      <li>
+                        <a href="">Profit & Loss</a>
+                      </li>
+                      <button>
+                        LOGOUT <RiLogoutBoxRLine />
+                      </button>
+                    </ul>
+                  </div>
+                )}
+              </button>
+            </div>
           </div>
-          <input
-            type="password"
-            placeholder="Password"
-            className="auth-input"
-          />
-          <div className="validation">
+        ) : (
+          <div className="auth-container">
+            <div className="user-section">
+              <FaUser className="user-icon" />
+              <input
+                type="text"
+                placeholder="Username"
+                className="auth-input"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </div>
             <input
-              type="text"
-              placeholder="Validation"
+              type="password"
+              placeholder="Password"
               className="auth-input"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
-            <span className="validation-number">6043</span>
+            <div className="validation">
+              <input
+                type="text"
+                placeholder="Validation"
+                className="auth-input"
+              />
+              <span className="validation-number">6043</span>
+            </div>
+            <button className="auth-btn login-btn" onClick={handleLogin}>
+              Login <MdOutlineLogin />
+            </button>
+            <button className="auth-btn signup-btn">Sign Up</button>
           </div>
-          <button className="auth-btn login-btn">
-            Login <MdOutlineLogin />
-          </button>
-          <button className="auth-btn signup-btn">Sign Up</button>
-        </div>
+        )}
       </div>
 
       {/* Bottom Navbar */}

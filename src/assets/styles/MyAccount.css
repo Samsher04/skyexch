@@ -1,0 +1,87 @@
+.my-account-container {
+  display: flex;
+  width: 87.5%;
+  margin: auto;
+  align-items: start;
+  gap: 15px;
+  font-family: sans-serif;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #e6e6e6;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #7e97a7;
+}
+
+.sidebar-title {
+  background-color: black;
+  color: #fff;
+  text-align: end;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 8px;
+  margin: 0;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: 5px 10px;
+  font-family: sans-serif;
+  font-size: 12px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.sidebar-menu li:hover {
+  background-color: #d9d9d9;
+}
+
+.account-details {
+  margin-top: 10px;
+  width: 81%;
+}
+
+.account-details-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 10px;
+}
+
+.section {
+  margin-bottom: 5px;
+  background-color: red;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.subsection {
+  margin-bottom: 0px;
+}
+
+.subsection-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+  background-color: #7e97a7;
+  padding: 4px 8px;
+  font-size: 14px;
+  color: white;
+  height: 24px;
+}
+.subsection ul li{
+  list-style: none;
+}
