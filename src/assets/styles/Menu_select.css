@@ -33,3 +33,9 @@
 .Menu-select-box .menu-item:hover {
   background-color: #eee1c06e;
 }
+
+@media only screen and (max-width: 800px) {
+  .Menu-select-box{
+    display: none;
+  }
+}

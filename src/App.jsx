@@ -17,6 +17,13 @@ import Kabaddi from "./pages/kabaddi";
 import VirtualCricket from "./pages/VirtualCricket";
 import Login from "./Config/Login";
 import MyAccount from "./pages/MyAccount";
+import Summary from "./pages/Summary";
+import AccountCashStatement from "./pages/AccountCashStatement";
+import Current_bets from "./pages/myBeat/Current_bets";
+import Bets_history from "./pages/MyBeat/Bets_history";
+import Profit_loss from "./pages/MyBeat/Profit_loss";
+import MobileNav from "./components/Mobilenav/MobileNav";
+
 
 const App = () => {
   return (
@@ -32,6 +39,7 @@ const MainApp = () => {
   return (
     <div>
       <Navbar />
+    
       <Routes>
         <Route index element={<Home />} />
         <Route path="in-play" element={<InPlay />} />
@@ -45,8 +53,15 @@ const MainApp = () => {
         <Route path="e-soccer" element={<ESoccer />} />
         <Route path="kabaddi" element={<Kabaddi />} />
         <Route path="virtual-cricket" element={<VirtualCricket />} />
-        <Route path="myAccount" element={<MyAccount />} />
+        <Route path="myAccount/profile" element={<MyAccount />} />
+        <Route path="myAccount/summary" element={<Summary />} />
+        <Route path="myAccount/accountCashStatement" element={<AccountCashStatement />} />
+        <Route path="myAccount/current_bets" element={<Current_bets />} />
+        <Route path="myAccount/bets-history" element={<Bets_history />} />
+        <Route path="myAccount/profit-loss" element={<Profit_loss />} />
       </Routes>
+
+      <MobileNav/>
 
       {loginOpen && <Login />}
     </div>

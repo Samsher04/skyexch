@@ -656,3 +656,18 @@ td {
   border-top: 1px solid #dfa3b3;
   border-bottom: 1px solid #dfa3b3;
 }
+
+
+
+
+@media only screen and (max-width: 800px) {
+  .market-event-container{
+    width: 100%;
+  }
+  .Fullmarket-wrap{
+    padding: 0px;
+  }
+  .fancy-tabs{
+    overflow: scroll;
+  }
+}

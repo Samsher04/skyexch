@@ -1,17 +1,52 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import dots from "../../public/dots.png";
 import { BsPinFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
+import { AppContext } from "../Context/AppContext";
 
 const SportsCard = ({ sportsData }) => {
+
+  const { setSelectedData, selectedData } = useContext(AppContext);
+
+  const handleDataClick = (teamName, odds, type) => {
+    const newData = {
+      teamName: teamName,
+      odds: odds,
+      oddsType: type,
+    };
+
+    const existingData = Cookies.get("selectedData");
+    const dataArray = existingData ? JSON.parse(existingData) : [];
+
+    const isDuplicate = dataArray.some(
+      (item) =>
+        item.teamName === newData.teamName &&
+        item.odds === newData.odds &&
+        item.oddsType === newData.oddsType
+    );
+
+    if (!isDuplicate) {
+      dataArray.push(newData);
+
+      Cookies.set("selectedData", JSON.stringify(dataArray));
+
+      setSelectedData(newData);
+    } else {
+      console.log("Duplicate data, not saving.");
+    }
+  };
+  
+
   const toggleDropdown = (id) => {
     document.getElementById(`sub-${id}`).classList.toggle("onsub");
   };
+
   return (
     <>
       {sportsData.map((sport, index) => (
         <ul className="dropdownul" key={index}>
-          <li></li>
+          <li className="first-row"></li>
           <div className="subdropdown" id={`sub-${index}`}>
             <div className="slip-head">
               <div className="slip-head-one">
@@ -47,10 +82,21 @@ const SportsCard = ({ sportsData }) => {
                 <div className="link-event-box">
                   {event.odds.map((odd, j) => (
                     <div className="link-event" key={j}>
-                      <button className="btn-back">
+                      <button
+                        className="btn-back"
+                        onClick={() =>
+                          handleDataClick(event.title, odd.back, "Back")
+                        }
+                      >
                         <b>{odd.back}</b>
                       </button>
-                      <button className="btn-lay">
+
+                      <button
+                        className="btn-lay"
+                        onClick={() =>
+                          handleDataClick(event.title, odd.lay, "Lay")
+                        }
+                      >
                         <b>{odd.lay}</b>
                       </button>
                     </div>

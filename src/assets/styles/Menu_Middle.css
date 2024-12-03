@@ -19,6 +19,7 @@
   margin-top: -25px;
 }
 
+
 .Highlights-Head {
   width: 100%;
   padding: 3px 2px 3px 10px;
@@ -33,15 +34,72 @@
   font-size: 13px;
 }
 
-.Highlights-Head p{
-    font-size: 11px;
+.Highlights-Head p {
+  font-size: 11px;
 }
 
-.select select{
-    background-color: transparent;
-    width: 108px;
-    height: 23px;
-    padding-left: 9px;
-    color: inherit;
-    border-radius: 4px;
+.select select {
+  background-color: transparent;
+  width: 108px;
+  height: 23px;
+  padding-left: 9px;
+  color: inherit;
+  border-radius: 4px;
+}
+
+.wrap-highlight_list{
+  display: none;
+}
+
+.Middle-wraper .slider-container{
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .Middle-wraper {
+    width: 100%;
+  }
+  .Highlights-Head {
+    display: none;
+  }
+  .slip-head {
+    display: none;
+  }
+
+  .Matched-details {
+    display: none;
+  }
+  .first-row{
+    display: none !important;
+  }
+  .link-event {
+    display: none;
+  }
+  .link-event-box {
+    width: auto;
+  }
+  .linkbox {
+    width: 100%;
+    border-right: none;
+  }
+  .cricket-banner {
+    display: none;
+  }
+  .Middle-wraper .slider-container {
+    display: block;
+    margin-top: 49px;
+  }
+  .footer-section {
+    display: none;
+  }
+  .wrap-highlight_list h3 {
+    background-image: linear-gradient(-180deg, #2e4b5e 0%, #243a48 82%);
+    color: #fff;
+    font-size: 11px;
+    line-height: 2.2;
+    text-align: center;
+    font-family: sans-serif;
+    display: flex;
+    justify-content:  center;
+  }
 }

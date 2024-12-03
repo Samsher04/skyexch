@@ -92,19 +92,19 @@ const Navbar = () => {
                         <a href="/myAccount">My Profile</a>
                       </li>
                       <li>
-                        <a href="">Balance Overview</a>
+                        <a href="/myAccount/summary">Balance Overview</a>
                       </li>
                       <li>
-                        <a href="">Account Statement</a>
+                        <a href="/myAccount/accountCashStatement">Account Statement</a>
                       </li>
                       <li>
-                        <a href="">My Bets</a>
+                        <a href="/myAccount/current_bets">My Bets</a>
                       </li>
                       <li>
-                        <a href="">Bets History</a>
+                        <a href="/myAccount/bets-history">Bets History</a>
                       </li>
                       <li>
-                        <a href="">Profit & Loss</a>
+                        <a href="/myAccount/profit-loss">Profit & Loss</a>
                       </li>
                       <button>
                         LOGOUT <RiLogoutBoxRLine />
@@ -148,6 +148,11 @@ const Navbar = () => {
             <button className="auth-btn signup-btn">Sign Up</button>
           </div>
         )}
+
+        <div className="mobile-auth-btn">
+          <Link>Sign up</Link>
+          <Link><FaUser /> Login</Link>
+        </div>
       </div>
 
       {/* Bottom Navbar */}

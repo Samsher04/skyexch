@@ -81,7 +81,7 @@ const Cricket = () => {
     <>
       <div className="Cricket-wrap">
         <Menu_select menuItems={menuItems} />
-        <Menu_Middle sportsData={sportsData}/>
+          <Menu_Middle sportsData={sportsData}/>
         <Bet_slip />
       </div>
     </>

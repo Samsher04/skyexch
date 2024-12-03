@@ -2,6 +2,8 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../assets/styles/Inplay.css";
 import InPlayCard from "../components/InPlayCard";
+import Bet_slip from "../components/Bet_slip";
+import { IoMdSearch } from "react-icons/io";
 
 const Tomorrow = () => {
   const sportsData = [
@@ -66,27 +68,28 @@ const Tomorrow = () => {
       <div className="Bars inplay">
         <div className="btn-box">
           <div className="inner-box">
-            <div className="inner-btn-box">
-              <NavLink to="/in-play">
-                <button className="btn-one">In-Play</button>
-              </NavLink>
-              <NavLink to="/Today">
-                <button className="btn-two">Today</button>
-              </NavLink>
-              <NavLink to="/tomorrow">
-                <button className="btn-three">Tomorrow</button>
-              </NavLink>
+          <div className="mobile-tabs1">
+              <div className="inner-btn-box">
+                <NavLink to="/in-play">
+                  <button className="btn-one">In-Play</button>
+                </NavLink>
+                <NavLink to="/Today">
+                  <button className="btn-two">Today</button>
+                </NavLink>
+                <NavLink to="/tomorrow">
+                  <button className="btn-three">Tomorrow</button>
+                </NavLink>
+              </div>
+              <button className="tabs-search">
+                <IoMdSearch />
+              </button>
             </div>
 
             {/* Play card component */}
             <InPlayCard sportsData={sportsData} />
           </div>
         </div>
-        <div className="inplay-outer-box">
-          <div className="inplay-rightbar">
-            <h5>Bet Slip</h5>
-          </div>
-        </div>
+        <Bet_slip />
       </div>
     </div>
   );

@@ -3,6 +3,8 @@ import "../assets/styles/Menu_Middle.css";
 import Footer from "./Footer/Footer";
 import banner from "../assets/images/kv_cricket.jpg";
 import SportsCard from "./SportsCard";
+import Banner from "./Banner/Banner";
+import MobileMenu from "./Mobilenav/MobileMenu";
 
 const Menu_Middle = ({sportsData}) => {
 
@@ -13,6 +15,9 @@ const Menu_Middle = ({sportsData}) => {
         <div className="cricket-banner">
           <img src={banner} alt="" />
         </div>
+
+        <Banner/>
+        <MobileMenu/>
 
         <div className="Highlights-Head">
           <h4>Sports Highlights</h4>
@@ -34,9 +39,11 @@ const Menu_Middle = ({sportsData}) => {
           </div>
         </div>
 
-        <SportsCard sportsData={sportsData} />
+         <SportsCard sportsData={sportsData} />
 
+       <div className="footer-section">
         <Footer />
+       </div>
       </div>
     </>
   );

@@ -25,13 +25,6 @@ const matchData = {
   fancyBets: [
     { bet: "20 Over BANG", no: "69", yes: "71" },
     { bet: "10 Over IRE", no: "42", yes: "44" },
-    { bet: "10 Over IRE", no: "42", yes: "44" },
-    { bet: "10 Over IRE", no: "42", yes: "44" },
-    { bet: "10 Over IRE", no: "42", yes: "44" },
-    { bet: "10 Over IRE", no: "42", yes: "44" },
-    { bet: "10 Over IRE", no: "42", yes: "44" },
-    { bet: "10 Over IRE", no: "42", yes: "44" },
-    { bet: "10 Over IRE", no: "42", yes: "44" },
   ],
 };
 
@@ -498,7 +491,9 @@ const FullMarketEvent = () => {
             </tbody>
           </table>
         )}
+        
       </div>
+
     </div>
   );
 };

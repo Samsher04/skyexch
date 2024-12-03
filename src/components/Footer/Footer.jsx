@@ -12,9 +12,9 @@ const Footer = () => {
           <div className="contact-button">WhatsApp 3 | WhatsApp 4</div>
         </div>
         <div className="contact-button"></div>
-        <div className="contact-box">
-        <div className="contact-button">info@skyexchange.com</div>
-        <div className="contact-button">info@skyexchange.com,zdjfcj</div>
+        <div className="contact-box contact-box2">
+        <div className="contact-button">Skype</div>
+        <div className="contact-button">Email</div>
         <div className="contact-button">skyexchindia</div>
         </div>
       </div>

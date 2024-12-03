@@ -252,3 +252,9 @@
   background-color: #faeff2;
   border-bottom: 1px solid #dfa3b3;
 }
+
+@media only screen and (max-width: 800px) {
+  .bet_slip-wrap{
+    display: none;
+  }
+}
