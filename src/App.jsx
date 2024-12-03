@@ -19,7 +19,7 @@ import Login from "./Config/Login";
 import MyAccount from "./pages/MyAccount";
 import Summary from "./pages/Summary";
 import AccountCashStatement from "./pages/AccountCashStatement";
-import Current_bets from "./pages/myBeat/Current_bets";
+import Current_bets from "../src/pages/MyBeat/Current_bets";
 import Bets_history from "./pages/MyBeat/Bets_history";
 import Profit_loss from "./pages/MyBeat/Profit_loss";
 import MobileNav from "./components/Mobilenav/MobileNav";
