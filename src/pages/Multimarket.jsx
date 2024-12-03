@@ -30,7 +30,7 @@ const Multimarket = () => {
         </div>
         <Bet_slip />
 
-        <div style={{ display: "flex", justifyContent: "space-between", width:"100%" }}>
+        <div className="multicard-main" style={{ display: "flex", justifyContent: "space-between", width:"100%" }}>
           <div className="multicard">
             <h3>
               There are currently no followed multi markets.

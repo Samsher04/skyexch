@@ -32,10 +32,18 @@
   margin-left: 320px;
 }
 
+.multicard-main{
+  display: none !important;
+}
+
 
 @media only screen and (max-width: 800px) {
     .Cricket-wrap{
       padding: 0px;
+    }
+
+    .multicard-main{
+      display: flex !important;
     }
 
     .Middle-wraper-multi{
