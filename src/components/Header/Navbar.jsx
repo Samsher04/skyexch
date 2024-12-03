@@ -89,22 +89,22 @@ const Navbar = () => {
                         <span className="sp2">GMT+530</span>
                       </h4>
                       <li>
-                        <a href="/myAccount/profile">My Profile</a>
+                        <Link to="/myAccount/profile">My Profile</Link>
                       </li>
                       <li>
-                        <a href="/myAccount/summary">Balance Overview</a>
+                        <Link to="/myAccount/summary">Balance Overview</Link>
                       </li>
                       <li>
-                        <a href="/myAccount/accountCashStatement">Account Statement</a>
+                        <Link to="/myAccount/accountCashStatement">Account Statement</Link>
                       </li>
                       <li>
-                        <a href="/myAccount/current_bets">My Bets</a>
+                        <Link to="/myAccount/current_bets">My Bets</Link>
                       </li>
                       <li>
-                        <a href="/myAccount/bets-history">Bets History</a>
+                        <Link to="/myAccount/bets-history">Bets History</Link>
                       </li>
                       <li>
-                        <a href="/myAccount/profit-loss">Profit & Loss</a>
+                        <Link to="/myAccount/profit-loss">Profit & Loss</Link>
                       </li>
                       <button>
                         LOGOUT <RiLogoutBoxRLine />
