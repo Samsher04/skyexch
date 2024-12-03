@@ -96,7 +96,7 @@ const Current_bets = () => {
   );
 };
 
-export default Current_bets;
+
 
 const Exchange = () => {
   const unmatchedBets = [
@@ -183,3 +183,5 @@ const Exchange = () => {
     </>
   );
 };
+
+export default Current_bets;

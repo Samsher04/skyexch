@@ -89,7 +89,7 @@ const Navbar = () => {
                         <span className="sp2">GMT+530</span>
                       </h4>
                       <li>
-                        <a href="/myAccount">My Profile</a>
+                        <a href="/myAccount/profile">My Profile</a>
                       </li>
                       <li>
                         <a href="/myAccount/summary">Balance Overview</a>
