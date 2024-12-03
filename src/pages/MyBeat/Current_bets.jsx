@@ -3,6 +3,92 @@ import { NavLink } from "react-router-dom";
 import AccountSidebar from "../../components/AccountSidebar";
 import MyBeatNav from "../../components/MyBeatNav";
 
+export const Exchange = () => {
+  const unmatchedBets = [
+    {
+      market: "Market 1",
+      selectionType: "Type 1",
+      betId: "#12345",
+      betPlaced: "01/12/2024",
+      oddsReq: "2.0",
+      matched: "50",
+      unmatched: "50",
+      dateMatched: "Shamsher",
+    },
+  ];
+
+  const matchedBets = [
+    {
+      market: "Market 2",
+      selectionType: "Type 2",
+      betId: "#67890",
+      betPlaced: "01/12/2024",
+      oddsReq: "1.8",
+      matched: "50",
+      avgOddsMatched: "1.9",
+      dateMatched: "Shamsher",
+    },
+  ];
+
+  return (
+    <>
+      <div className="transaction-table" style={{ marginBottom: "15px" }}>
+        <div className="transaction-table-header">Unmatched</div>
+        <div className="table-header table-header2">
+          <span style={{ width: "395px" }}>Market</span>
+          <span style={{ width: "150px" }}>Selection Type</span>
+          <span>Bet ID</span>
+          <span>Bet placed</span>
+          <span>Odds req.</span>
+          <span>Matched</span>
+          <span>Unmatched</span>
+          <span style={{ textAlign: "end" }}>Date matched</span>
+        </div>
+
+        {unmatchedBets.map((bet, index) => (
+          <div key={index} className="table-row11 table-row2">
+            <span style={{ width: "395px" }}>{bet.market}</span>
+            <span style={{ width: "150px" }}>{bet.selectionType}</span>
+            <span>{bet.betId}</span>
+            <span>{bet.betPlaced}</span>
+            <span>{bet.oddsReq}</span>
+            <span>{bet.matched}</span>
+            <span>{bet.unmatched}</span>
+            <span style={{ textAlign: "end" }}>{bet.dateMatched}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="transaction-table">
+        <div className="transaction-table-header">Matched</div>
+        <div className="table-header table-header2">
+          <span style={{ width: "395px" }}>Market</span>
+          <span style={{ width: "150px" }}>Selection Type</span>
+          <span>Bet ID</span>
+          <span>Bet placed</span>
+          <span>Odds req.</span>
+          <span>Matched</span>
+          <span>Avg. odds matched</span>
+          <span style={{ textAlign: "end" }}>Date matched</span>
+        </div>
+
+        {matchedBets.map((bet, index) => (
+          <div key={index} className="table-row11 table-row2">
+            <span style={{ width: "395px" }}>{bet.market}</span>
+            <span style={{ width: "150px" }}>{bet.selectionType}</span>
+            <span>{bet.betId}</span>
+            <span>{bet.betPlaced}</span>
+            <span>{bet.oddsReq}</span>
+            <span>{bet.matched}</span>
+            <span>{bet.avgOddsMatched}</span>
+            <span style={{ textAlign: "end" }}>{bet.dateMatched}</span>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
+
 const Current_bets = () => {
   const [activeCategory, setActiveCategory] = useState("Exchange");
 
@@ -98,89 +184,5 @@ const Current_bets = () => {
 export default Current_bets;
 
 
-const Exchange = () => {
-  const unmatchedBets = [
-    {
-      market: "Market 1",
-      selectionType: "Type 1",
-      betId: "#12345",
-      betPlaced: "01/12/2024",
-      oddsReq: "2.0",
-      matched: "50",
-      unmatched: "50",
-      dateMatched: "Shamsher",
-    },
-  ];
 
-  const matchedBets = [
-    {
-      market: "Market 2",
-      selectionType: "Type 2",
-      betId: "#67890",
-      betPlaced: "01/12/2024",
-      oddsReq: "1.8",
-      matched: "50",
-      avgOddsMatched: "1.9",
-      dateMatched: "Shamsher",
-    },
-  ];
-
-  return (
-    <>
-      <div className="transaction-table" style={{ marginBottom: "15px" }}>
-        <div className="transaction-table-header">Unmatched</div>
-        <div className="table-header table-header2">
-          <span style={{ width: "395px" }}>Market</span>
-          <span style={{ width: "150px" }}>Selection Type</span>
-          <span>Bet ID</span>
-          <span>Bet placed</span>
-          <span>Odds req.</span>
-          <span>Matched</span>
-          <span>Unmatched</span>
-          <span style={{ textAlign: "end" }}>Date matched</span>
-        </div>
-
-        {unmatchedBets.map((bet, index) => (
-          <div key={index} className="table-row11 table-row2">
-            <span style={{ width: "395px" }}>{bet.market}</span>
-            <span style={{ width: "150px" }}>{bet.selectionType}</span>
-            <span>{bet.betId}</span>
-            <span>{bet.betPlaced}</span>
-            <span>{bet.oddsReq}</span>
-            <span>{bet.matched}</span>
-            <span>{bet.unmatched}</span>
-            <span style={{ textAlign: "end" }}>{bet.dateMatched}</span>
-          </div>
-        ))}
-      </div>
-
-      <div className="transaction-table">
-        <div className="transaction-table-header">Matched</div>
-        <div className="table-header table-header2">
-          <span style={{ width: "395px" }}>Market</span>
-          <span style={{ width: "150px" }}>Selection Type</span>
-          <span>Bet ID</span>
-          <span>Bet placed</span>
-          <span>Odds req.</span>
-          <span>Matched</span>
-          <span>Avg. odds matched</span>
-          <span style={{ textAlign: "end" }}>Date matched</span>
-        </div>
-
-        {matchedBets.map((bet, index) => (
-          <div key={index} className="table-row11 table-row2">
-            <span style={{ width: "395px" }}>{bet.market}</span>
-            <span style={{ width: "150px" }}>{bet.selectionType}</span>
-            <span>{bet.betId}</span>
-            <span>{bet.betPlaced}</span>
-            <span>{bet.oddsReq}</span>
-            <span>{bet.matched}</span>
-            <span>{bet.avgOddsMatched}</span>
-            <span style={{ textAlign: "end" }}>{bet.dateMatched}</span>
-          </div>
-        ))}
-      </div>
-    </>
-  );
-};
 
