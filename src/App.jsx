@@ -57,10 +57,10 @@ const MainApp = () => {
         <Route path="myAccount/profile" element={<MyAccount />} />
         <Route path="myAccount/summary" element={<Summary />} />
         <Route path="myAccount/accountCashStatement" element={<AccountCashStatement />} />
-        <Route path="myAccount/current_bets" element={<Current_bets />} />
+        <Route path="myAccount/current-bets" element={<Current_bets />} />
         <Route path="myAccount/bets-history" element={<Bets_history />} />
         <Route path="myAccount/profit-loss" element={<Profit_loss />} />
-        <Route path="/login" element={<AuthLogin />} />
+        <Route path="login" element={<AuthLogin />} />
       </Routes>
 
       <MobileNav/>
