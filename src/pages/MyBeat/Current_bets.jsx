@@ -95,7 +95,7 @@ const Current_bets = () => {
     </div>
   );
 };
-
+export default Current_bets;
 
 
 const Exchange = () => {
@@ -184,4 +184,3 @@ const Exchange = () => {
   );
 };
 
-export default Current_bets;
