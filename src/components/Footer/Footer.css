@@ -105,6 +105,10 @@
       grid-template-columns: repeat(3, 1fr);
     }
     .contact-box{
-      padding: 5px;
+      padding: 0px;
+      gap: 10px;
+    }
+    .contact-button{
+      padding: 13px;
     }
    }

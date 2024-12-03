@@ -151,7 +151,7 @@ const Navbar = () => {
 
         <div className="mobile-auth-btn">
           <Link>Sign up</Link>
-          <Link><FaUser /> Login</Link>
+          <Link to="/Login"><FaUser /> Login</Link>
         </div>
       </div>
 

@@ -23,6 +23,7 @@ import AccountCashStatement from "./pages/AccountCashStatement";
 import Bets_history from "./pages/MyBeat/Bets_history";
 import Profit_loss from "./pages/MyBeat/Profit_loss";
 import MobileNav from "./components/Mobilenav/MobileNav";
+import AuthLogin from "./pages/AuthLogin";
 
 
 const App = () => {
@@ -59,6 +60,7 @@ const MainApp = () => {
         {/* <Route path="myAccount/current_bets" element={<Current_bets />} /> */}
         <Route path="myAccount/bets-history" element={<Bets_history />} />
         <Route path="myAccount/profit-loss" element={<Profit_loss />} />
+        <Route path="/login" element={<AuthLogin />} />
       </Routes>
 
       <MobileNav/>
