@@ -57,7 +57,7 @@ const MainApp = () => {
         <Route path="myAccount/profile" element={<MyAccount />} />
         <Route path="myAccount/summary" element={<Summary />} />
         <Route path="myAccount/accountCashStatement" element={<AccountCashStatement />} />
-        {/* <Route path="myAccount/currentBets" element={<Current_bets />} /> */}
+        <Route path="myAccount/currentBets" element={<Current_bets />} />
         <Route path="myAccount/bets-history" element={<Bets_history />} />
         <Route path="myAccount/profit-loss" element={<Profit_loss />} />
         <Route path="/login" element={<AuthLogin />} />
