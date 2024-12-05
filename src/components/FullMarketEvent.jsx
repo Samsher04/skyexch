@@ -8,6 +8,9 @@ import btnaddpin from "../../public/btn-add-pin.png";
 import icon_irun from "../../public/icon-irun.png";
 import { AppContext } from "../Context/AppContext";
 import Cookies from "js-cookie";
+import MatchOddsMobile from "./MatchOddsMobile";
+import BookmakMobile from "./BookmakMobile";
+
 
 const matchData = {
   matchOdds: [
@@ -98,9 +101,11 @@ const FullMarketEvent = () => {
           <div className="live-match-track__box">
             <button>
               <BsPinFill />
+              <p>Pin</p>
             </button>
             <button>
               <IoMdRefresh />
+              <p>Refress</p>
             </button>
           </div>
         </div>
@@ -129,6 +134,8 @@ const FullMarketEvent = () => {
           </div>
         </div>
       </div>
+
+  
 
       {/* Match Odds Table Section */}
       <div className="odds-section">
@@ -186,6 +193,10 @@ const FullMarketEvent = () => {
           </tbody>
         </table>
       </div>
+
+      {/* Live Match mobile Tracking Section */}
+          <MatchOddsMobile/>
+      {/* Live Match mobile Tracking Section */}
 
       {/* Bookmaker Market Section */}
       <div className="bookmaker-section">
@@ -355,6 +366,10 @@ const FullMarketEvent = () => {
           </tbody>
         </table>
       </div>
+
+      {/* Bookmaker Market mobile Section */}
+      <BookmakMobile/>
+      {/* Bookmaker Market mobile Section */}
 
       {/* Fancy Bet Section with Tabs */}
       <div className="fancy-section">

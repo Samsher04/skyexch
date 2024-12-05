@@ -657,6 +657,17 @@ td {
   border-bottom: 1px solid #dfa3b3;
 }
 
+.live-match-track__box button p{
+  display: none;
+}
+
+.mobile-odds{
+  display: none;
+}
+
+.mobile-bookmark{
+  display: none;
+}
 
 
 
@@ -664,10 +675,90 @@ td {
   .market-event-container{
     width: 100%;
   }
+  .Bookmaker-Market-head{
+
+    line-height: 8.5333333333vw;
+    padding: 0 0 0 1.8666666667vw;
+    width: 100% !important;
+    height: 8.5333333333vw;
+    background-color: #3b5160;
+  }
+  .Bookmaker-Market-head h4{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 3.4666666667vw !important;
+    color: #fff;
+
+  }
+  .Bookmaker-Market-head h4 span{
+    font-size: 3.4666666667vw !important;
+    margin-left: 0px !important;
+  }
+  .desktop-bookmark{
+    display: none;
+  }
+  .Commission-max-box{
+    display: none;
+  }
   .Fullmarket-wrap{
     padding: 0px;
   }
   .fancy-tabs{
     overflow: scroll;
   }
+
+  .mobile-odds{
+    display: block;
+  }
+  .mobile-bookmark{
+    display: block;
+    width: 6.6666666667vw;
+    height: 6.6666666667vw;
+  }
+
+  .match-odds button{
+    color: #ffb200;
+    background-image: linear-gradient(180deg, #474747 0%, #070707 100%);
+    clip-path: none;
+    border-radius: 50px;
+    margin: 8px;
+    margin-bottom: 5px;
+    padding: 0px;
+    text-align: center;
+    padding: 0 2.9333333333vw 0 4vw;
+    height: auto;
+    width: auto;
+    line-height: 9.0666666667vw;
+  }
+
+  .live-match-track__box button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .live-match-track__box button p{
+    display: block;
+    font-size: 11px;
+  } 
+  
+  .bookmaker-section{
+    display: none;
+  }
+
+  .bookmaker-section-mobile{
+    display: block;
+  }
+  .bookmaker-section-mobile .lay-gradient{
+    background-color: red;
+  }
+
+  .bookmaker-section-mobile .back-gradient{
+    background-color: red;
+  }
+
+
+
 }
