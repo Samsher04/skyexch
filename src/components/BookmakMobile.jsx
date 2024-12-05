@@ -32,7 +32,7 @@ const BookmakMobile = () => {
   };
 
   return (
-    <div style={{ fontFamily: "Arial, sans-serif" }}>
+    <div className="bookmaker-section-mobile" style={{ fontFamily: "Arial, sans-serif" }}>
       <div className="Bookmaker-Market-head">
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <img className="desktop-bookmark" src={btnaddpin} alt="" />

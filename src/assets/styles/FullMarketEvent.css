@@ -665,7 +665,7 @@ td {
   display: none;
 }
 
-.mobile-bookmark{
+.bookmaker-section-mobile{
   display: none;
 }
 
@@ -751,13 +751,7 @@ td {
   .bookmaker-section-mobile{
     display: block;
   }
-  .bookmaker-section-mobile .lay-gradient{
-    background-color: red;
-  }
 
-  .bookmaker-section-mobile .back-gradient{
-    background-color: red;
-  }
 
 
 
