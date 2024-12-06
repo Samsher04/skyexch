@@ -680,6 +680,10 @@ td {
   .market-event-container {
     width: 100%;
   }
+  .Fullmarket-wrap{
+    height: auto;
+    margin-bottom: 50px;
+  }
   .Bookmaker-Market-head {
     line-height: 8.5333333333vw;
     padding: 0 0 0 1.8666666667vw;
@@ -709,6 +713,23 @@ td {
   }
   .fancy-tabs {
     overflow: scroll;
+    background-color: transparent;
+  }
+  .fancy-tabs .active-tab{
+    color: #076875;
+    border: none;
+    border-radius: 1.0666666667vw;
+
+
+  }
+  .fancy-tabs button {
+    color: white;
+    white-space: nowrap;
+    border-radius: 0px;
+    border-right: 1px solid #469aa7;
+    line-height: 6.9333333333vw;
+    font-size: 3.2vw;
+    padding: 0 2.6666666667vw;
   }
 
   .mobile-odds {

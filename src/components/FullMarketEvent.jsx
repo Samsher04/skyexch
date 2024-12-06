@@ -194,7 +194,7 @@ const FullMarketEvent = () => {
       </div>
 
       {/* Live Match mobile Tracking Section */}
-      <MatchOddsMobile />
+        <MatchOddsMobile />
       {/* Live Match mobile Tracking Section */}
 
       {/* Bookmaker Market Section */}
@@ -367,7 +367,7 @@ const FullMarketEvent = () => {
       </div>
 
       {/* Bookmaker Market mobile Section */}
-      <BookmakMobile />
+         <BookmakMobile />
       {/* Bookmaker Market mobile Section */}
 
       {/* Fancy Bet Section with Tabs */}
