@@ -12,6 +12,7 @@ import MatchOddsMobile from "./MatchOddsMobile";
 import BookmakMobile from "./BookmakMobile";
 import shape from "../../public/bg-fanctbet_rules.svg";
 import pinshape from "../../public/pinshape.svg";
+import FancyBetMobile from "./FancyBetMobile";
 
 const matchData = {
   matchOdds: [
@@ -194,7 +195,7 @@ const FullMarketEvent = () => {
       </div>
 
       {/* Live Match mobile Tracking Section */}
-        <MatchOddsMobile />
+      <MatchOddsMobile />
       {/* Live Match mobile Tracking Section */}
 
       {/* Bookmaker Market Section */}
@@ -367,7 +368,7 @@ const FullMarketEvent = () => {
       </div>
 
       {/* Bookmaker Market mobile Section */}
-         <BookmakMobile />
+      <BookmakMobile />
       {/* Bookmaker Market mobile Section */}
 
       {/* Fancy Bet Section with Tabs */}
@@ -381,10 +382,9 @@ const FullMarketEvent = () => {
               <img src={icon_irun} alt="" /> Fancy Bet
             </span>
             <div className="shape-img-box">
-            
-            <div className="shape-img-outer">
+              <div className="shape-img-outer">
                 <img className="shape-img" src={shape} alt="" />
-            </div>
+              </div>
             </div>
           </h4>
         </div>
@@ -414,105 +414,109 @@ const FullMarketEvent = () => {
 
         {/* Fancy Bet Table */}
         {activeTab === "Fancy" && (
-          <table className="fancy-table">
-            <thead style={{ backgroundColor: "white" }}>
-              <tr>
-                <th
-                  colSpan={1}
-                  style={{ padding: "5px", fontSize: "13px" }}
-                ></th>
-                <th style={{ padding: "5px", fontSize: "13px" }}>No</th>
-                <th style={{ padding: "5px", fontSize: "13px" }}>Yes</th>
-                <th style={{ padding: "5px", fontSize: "13px" }}></th>
-              </tr>
-            </thead>
-            <tbody>
-              {matchData.fancyBets.map((bet, index) => (
-                <tr key={index}>
-                  <td style={{ textAlign: "start" }}>
-                    <dl class="fancy-th-layout">
-                      <dt>
-                        <p
-                          style={{
-                            fontWeight: "bold",
-                            fontSize: "12px",
-                            color: "black",
-                          }}
-                          id="marketName"
-                        >
-                          BRHW Will Win The Toss Bhav
-                        </p>
-                      </dt>
-                    </dl>
-                  </td>
-                  <td style={{ backgroundColor: "#faa9ba" }}>
-                    <b
-                      style={{
-                        fontWeight: "bold",
-                        fontSize: "12px",
-                        color: "black",
-                      }}
-                    >
-                      1
-                    </b>
-                    <br />
-                    <p
-                      style={{
-                        fontSize: "11px",
-                        color: "black",
-                      }}
-                    >
-                      {bet.no}
-                    </p>
-                  </td>
-                  <td style={{ backgroundColor: "#72bbef" }}>
-                    <b
-                      style={{
-                        fontWeight: "bold",
-                        fontSize: "12px",
-                        color: "black",
-                      }}
-                    >
-                      1
-                    </b>
-                    <br />
-                    <p
-                      style={{
-                        fontSize: "11px",
-                        color: "black",
-                      }}
-                    >
-                      {bet.yes}
-                    </p>
-                  </td>
-                  <td>
-                    <dl>
-                      <dt
+          <>
+            <table className="fancy-table">
+              <thead style={{ backgroundColor: "white" }}>
+                <tr>
+                  <th
+                    colSpan={1}
+                    style={{ padding: "5px", fontSize: "13px" }}
+                  ></th>
+                  <th style={{ padding: "5px", fontSize: "13px" }}>No</th>
+                  <th style={{ padding: "5px", fontSize: "13px" }}>Yes</th>
+                  <th style={{ padding: "5px", fontSize: "13px" }}></th>
+                </tr>
+              </thead>
+              <tbody>
+                {matchData.fancyBets.map((bet, index) => (
+                  <tr key={index}>
+                    <td style={{ textAlign: "start" }}>
+                      <dl class="fancy-th-layout">
+                        <dt>
+                          <p
+                            style={{
+                              fontWeight: "bold",
+                              fontSize: "12px",
+                              color: "black",
+                            }}
+                            id="marketName"
+                          >
+                            BRHW Will Win The Toss Bhav
+                          </p>
+                        </dt>
+                      </dl>
+                    </td>
+                    <td style={{ backgroundColor: "#faa9ba" }}>
+                      <b
                         style={{
-                          textAlign: "start",
-                          fontSize: "11px",
-                          color: "#7e97a7",
+                          fontWeight: "bold",
+                          fontSize: "12px",
+                          color: "black",
                         }}
                       >
-                        Min/Max
-                      </dt>
-                      <dd
+                        1
+                      </b>
+                      <br />
+                      <p
                         style={{
-                          textAlign: "start",
                           fontSize: "11px",
                           color: "black",
                         }}
-                        id="minMax"
                       >
-                        {" "}
-                        1.00 / 781.00
-                      </dd>
-                    </dl>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                        {bet.no}
+                      </p>
+                    </td>
+                    <td style={{ backgroundColor: "#72bbef" }}>
+                      <b
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "12px",
+                          color: "black",
+                        }}
+                      >
+                        1
+                      </b>
+                      <br />
+                      <p
+                        style={{
+                          fontSize: "11px",
+                          color: "black",
+                        }}
+                      >
+                        {bet.yes}
+                      </p>
+                    </td>
+                    <td>
+                      <dl>
+                        <dt
+                          style={{
+                            textAlign: "start",
+                            fontSize: "11px",
+                            color: "#7e97a7",
+                          }}
+                        >
+                          Min/Max
+                        </dt>
+                        <dd
+                          style={{
+                            textAlign: "start",
+                            fontSize: "11px",
+                            color: "black",
+                          }}
+                          id="minMax"
+                        >
+                          {" "}
+                          1.00 / 781.00
+                        </dd>
+                      </dl>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+
+            <FancyBetMobile />
+          </>
         )}
       </div>
     </div>

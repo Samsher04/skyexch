@@ -672,15 +672,140 @@ td {
   display: none;
 }
 
-.shape-img-box{
+.shape-img-box {
   display: none;
+}
+
+
+.fbm-container {
+  font-family: "Arial, sans-serif";
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: none;
+}
+
+.fbm-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+  padding: 10px 0;
+  background-color: #e0f2ff;
+  border-bottom: 1px solid #ddd;
+  border-radius: 8px 8px 0 0;
+}
+
+.fbm-bet-container {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+.fbm-header-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  height: 22px;
+  align-items: center;
+  border-bottom: 1px solid #7e97a7;
+}
+
+.fbm-header-cell {
+  font-weight: bold;
+  color: #333;
+  flex: 1;
+  text-align: center;
+}
+
+.fbm-header-cell-bet {
+  flex: 2;
+}
+
+.fbm-bet-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.fbm-bet-name {
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #3b5160;
+  background-color: #e4f1f9;
+  height: 8.5333333333vw;
+  font-size: 3.4666666667vw;
+    line-height: 8.5333333333vw;
+    padding: 0 0 0 1.8666666667vw;
+}
+
+.fbm-info-icon {
+  margin-left: 5px;
+  color: #888;
+  font-size: 12px;
+}
+
+.fbm-bet-values {
+  display: flex;
+}
+
+.fbm-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 10px;
+}
+
+.fbm-cell-no {
+  background-color: #faa9ba;
+  width: 18.6666666667vw;
+}
+
+.fbm-cell-yes {
+  background-color: #72bbef;
+  width: 18.6666666667vw;
+}
+
+.fbm-small-text {
+  font-size: 10px;
+  color: #555;
+}
+
+.line_market-selection-main{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  min-height: 11.2vw;
+    border-bottom: 1px solid #7e97a7;
+}
+.line_market-selection{
+  width: 63%;
+}
+.fbm-line_market-item{
+  display: flex;
+  background-color: #076875;
 }
 
 @media only screen and (max-width: 800px) {
   .market-event-container {
     width: 100%;
   }
-  .Fullmarket-wrap{
+  .fbm-container{
+    display: block;
+  }
+  .Fullmarket-wrap {
     height: auto;
     margin-bottom: 50px;
   }
@@ -715,12 +840,10 @@ td {
     overflow: scroll;
     background-color: transparent;
   }
-  .fancy-tabs .active-tab{
+  .fancy-tabs .active-tab {
     color: #076875;
     border: none;
     border-radius: 1.0666666667vw;
-
-
   }
   .fancy-tabs button {
     color: white;
@@ -794,7 +917,7 @@ td {
     justify-content: center;
     align-items: center;
   }
-  .bet-shape img{
+  .bet-shape img {
     width: 5.8666666667vw;
     height: 5.8666666667vw;
     margin-left: -7px;
@@ -814,7 +937,7 @@ td {
   .in-play::after {
     display: none;
   }
-  .shape-img-box{
+  .shape-img-box {
     position: absolute;
     left: 8.5em;
     display: block;
@@ -826,13 +949,13 @@ td {
     justify-content: center;
     align-items: center;
   }
-  .shape-img-outer{
+  .shape-img-outer {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .shape-img-outer::after{
+  .shape-img-outer::after {
     position: absolute;
     content: "";
     width: 4vw;
@@ -841,7 +964,13 @@ td {
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .headerName{
+  .headerName {
     font-size: 3.7333333333vw;
+  }
+  .fancy-table{
+    display: none;
+  }
+  .fancy-table-mobile{
+    display: block;
   }
 }
