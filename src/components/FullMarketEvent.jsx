@@ -10,7 +10,8 @@ import { AppContext } from "../Context/AppContext";
 import Cookies from "js-cookie";
 import MatchOddsMobile from "./MatchOddsMobile";
 import BookmakMobile from "./BookmakMobile";
-
+import shape from "../../public/bg-fanctbet_rules.svg";
+import pinshape from "../../public/pinshape.svg";
 
 const matchData = {
   matchOdds: [
@@ -135,8 +136,6 @@ const FullMarketEvent = () => {
         </div>
       </div>
 
-  
-
       {/* Match Odds Table Section */}
       <div className="odds-section">
         <table className="odds-table">
@@ -195,7 +194,7 @@ const FullMarketEvent = () => {
       </div>
 
       {/* Live Match mobile Tracking Section */}
-          <MatchOddsMobile/>
+      <MatchOddsMobile />
       {/* Live Match mobile Tracking Section */}
 
       {/* Bookmaker Market Section */}
@@ -368,16 +367,25 @@ const FullMarketEvent = () => {
       </div>
 
       {/* Bookmaker Market mobile Section */}
-      <BookmakMobile/>
+      <BookmakMobile />
       {/* Bookmaker Market mobile Section */}
 
       {/* Fancy Bet Section with Tabs */}
       <div className="fancy-section">
         <div id="fancyBetHead" className="fancy-head">
+          <div className="bet-shape">
+            <img src={pinshape} alt="" />
+          </div>
           <h4 className="in-play">
             <span id="headerName">
               <img src={icon_irun} alt="" /> Fancy Bet
             </span>
+            <div className="shape-img-box">
+            
+            <div className="shape-img-outer">
+                <img className="shape-img" src={shape} alt="" />
+            </div>
+            </div>
           </h4>
         </div>
 
@@ -506,9 +514,7 @@ const FullMarketEvent = () => {
             </tbody>
           </table>
         )}
-        
       </div>
-
     </div>
   );
 };

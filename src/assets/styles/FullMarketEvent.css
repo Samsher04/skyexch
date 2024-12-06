@@ -458,16 +458,16 @@ td {
   background-color: #80c2f1;
 }
 
-.lay-gradient.active div:last-child p{
+.lay-gradient.active div:last-child p {
   background-color: #1a8ee1;
-    color: #fff;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .5);
+  color: #fff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.back-gradient.active div:first-child p{
+.back-gradient.active div:first-child p {
   background-color: #f4496d;
-    color: #fff;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .5);
+  color: #fff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .back-gradient dd p {
@@ -563,9 +563,9 @@ td {
 
 .coin-button p {
   font-size: 10px;
-    line-height: 12px;
-    color: #222;
-    opacity: .5;
+  line-height: 12px;
+  color: #222;
+  opacity: 0.5;
 }
 
 /* Button Styles */
@@ -646,78 +646,81 @@ td {
   background-color: #f0f0f0;
 }
 
-
-.sub-menu.lay{
+.sub-menu.lay {
   background-color: #f3dce2;
 }
 
-.sub-menu.lay .quick-buttons{
+.sub-menu.lay .quick-buttons {
   background-color: #faeff2;
   border-top: 1px solid #dfa3b3;
   border-bottom: 1px solid #dfa3b3;
 }
 
-.live-match-track__box button p{
+.live-match-track__box button p {
   display: none;
 }
 
-.mobile-odds{
+.mobile-odds {
   display: none;
 }
 
-.bookmaker-section-mobile{
+.bookmaker-section-mobile {
   display: none;
 }
 
+.bet-shape {
+  display: none;
+}
 
+.shape-img-box{
+  display: none;
+}
 
 @media only screen and (max-width: 800px) {
-  .market-event-container{
+  .market-event-container {
     width: 100%;
   }
-  .Bookmaker-Market-head{
-
+  .Bookmaker-Market-head {
     line-height: 8.5333333333vw;
     padding: 0 0 0 1.8666666667vw;
     width: 100% !important;
     height: 8.5333333333vw;
     background-color: #3b5160;
   }
-  .Bookmaker-Market-head h4{
+  .Bookmaker-Market-head h4 {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 3.4666666667vw !important;
     color: #fff;
-
   }
-  .Bookmaker-Market-head h4 span{
+  .Bookmaker-Market-head h4 span {
     font-size: 3.4666666667vw !important;
     margin-left: 0px !important;
   }
-  .desktop-bookmark{
+  .desktop-bookmark {
     display: none;
   }
-  .Commission-max-box{
+  .Commission-max-box {
     display: none;
   }
-  .Fullmarket-wrap{
+  .Fullmarket-wrap {
     padding: 0px;
   }
-  .fancy-tabs{
+  .fancy-tabs {
     overflow: scroll;
   }
 
-  .mobile-odds{
+  .mobile-odds {
     display: block;
   }
-  .mobile-bookmark{
+  .mobile-bookmark {
     display: block;
     width: 6.6666666667vw;
     height: 6.6666666667vw;
   }
 
-  .match-odds button{
+  .match-odds button {
     color: #ffb200;
     background-image: linear-gradient(180deg, #474747 0%, #070707 100%);
     clip-path: none;
@@ -732,27 +735,92 @@ td {
     line-height: 9.0666666667vw;
   }
 
-  .live-match-track__box button{
+  .live-match-track__box button {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3px;
   }
 
-  .live-match-track__box button p{
+  .live-match-track__box button p {
     display: block;
     font-size: 11px;
-  } 
-  
-  .bookmaker-section{
+  }
+
+  .bookmaker-section {
     display: none;
   }
 
-  .bookmaker-section-mobile{
+  .bookmaker-section-mobile {
     display: block;
   }
 
+  #fancyBetHead {
+    display: flex;
+    align-items: center;
+  }
 
+  .bet-shape {
+    display: flex;
+    width: 10.6666666667vw;
+    height: 8vw;
+    margin-right: 0;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, right;
+    background-size: cover;
+    background-image: url(../../../public/shape.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bet-shape img{
+    width: 5.8666666667vw;
+    height: 5.8666666667vw;
+    margin-left: -7px;
+  }
+  .in-play {
+    height: 8vw;
+    display: flex;
+    width: auto;
+    padding: 0;
+    margin-left: -10px;
+    position: relative;
+    z-index: -1;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-image: linear-gradient(-180deg, #0a92a5 0%, #087989 82%);
+  }
+  .in-play::after {
+    display: none;
+  }
+  .shape-img-box{
+    position: absolute;
+    left: 8.9em;
+    display: block;
+  }
+  .shape-img {
+    height: 8vw;
 
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .shape-img-outer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .shape-img-outer::after{
+    position: absolute;
+    content: "";
+    width: 4vw;
+    height: 4vw;
+    background-image: url(../../../public/qsimg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .headerName{
+    font-size: 3.7333333333vw;
+  }
 }
