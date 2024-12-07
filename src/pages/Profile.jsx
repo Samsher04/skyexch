@@ -69,7 +69,7 @@ function Profile() {
                   <h4>Shamsher</h4>
                   <span>Demo</span>
                 </div>
-                <div className="time-zone">GMT-5:30</div>
+                <div className="time-zone2">GMT-5:30</div>
               </div>
               <ul className="leful User">
                 <li>
