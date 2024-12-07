@@ -11,9 +11,11 @@
   font-size: 4.2666666667vw;
   font-weight: bold;
   margin-bottom: 5.3333333333vw;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  gap: 5px;
 }
 .downarrow {
   width: 6.4vw;
