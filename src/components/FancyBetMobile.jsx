@@ -1,4 +1,6 @@
 import React from "react";
+import arrow from "../../public/arrow.svg";
+import info from "../../public/info.svg";
 
 const matchData = {
   fancyBets: [
@@ -22,21 +24,24 @@ const FancyBetMobile = () => {
           <div key={index} className="fbm-bet-row">
             <div className="fbm-bet-name">
               {bet.bet}
-              <span className="fbm-info-icon">ℹ️</span>
+              <img className="fbm-info-icon" src={info} alt="" />
             </div>
 
             <div className="line_market-selection-main">
               <div className="line_market-selection">
-                <p>00.5</p>
+                <h4>
+                  <img src={arrow} alt="" /> 00.5
+                </h4>
+                {/* <p>2nd Wkt Pship Boundaries SL</p> */}
               </div>
               <div className="fbm-line_market-item">
                 <div className="fbm-cell fbm-cell-no">
-                  <div>{bet.no}</div>
-                  <div className="fbm-small-text">100</div>
+                  <h4>{bet.no}</h4>
+                  <p className="fbm-small-text">100</p>
                 </div>
                 <div className="fbm-cell fbm-cell-yes">
-                  <div>{bet.yes}</div>
-                  <div className="fbm-small-text">100</div>
+                  <h4>{bet.yes}</h4>
+                  <p className="fbm-small-text">100</p>
                 </div>
               </div>
             </div>

@@ -676,7 +676,6 @@ td {
   display: none;
 }
 
-
 .fbm-container {
   font-family: "Arial, sans-serif";
   background-color: #f8f9fa;
@@ -728,7 +727,6 @@ td {
   flex-direction: column;
   justify-content: space-between;
   background-color: #fff;
-  border: 1px solid #ddd;
 }
 
 .fbm-bet-name {
@@ -743,14 +741,17 @@ td {
   background-color: #e4f1f9;
   height: 8.5333333333vw;
   font-size: 3.4666666667vw;
-    line-height: 8.5333333333vw;
-    padding: 0 0 0 1.8666666667vw;
+  line-height: 8.5333333333vw;
+  padding: 0 0 0 1.8666666667vw;
 }
 
 .fbm-info-icon {
   margin-left: 5px;
   color: #888;
-  font-size: 12px;
+  width: 4vw;
+    height: 4vw;
+    background-size: contain;
+    margin-right: 3px;
 }
 
 .fbm-bet-values {
@@ -764,36 +765,66 @@ td {
   flex: 1;
   font-weight: bold;
   color: #333;
-  padding: 8px 10px;
+  padding: 1.6vw;
 }
 
 .fbm-cell-no {
   background-color: #faa9ba;
   width: 18.6666666667vw;
+  flex-direction: column;
 }
 
 .fbm-cell-yes {
   background-color: #72bbef;
   width: 18.6666666667vw;
+  flex-direction: column;
+}
+.fbm-cell-yes h4 {
+  color: #1e1e1e;
+  font-size: 3.4666666667vw;
+}
+
+.fbm-cell-no h4 {
+  color: #1e1e1e;
+  font-size: 3.4666666667vw;
 }
 
 .fbm-small-text {
-  font-size: 10px;
+  font-size: 9px;
   color: #555;
+  margin-top: 2px;
 }
 
-.line_market-selection-main{
+.line_market-selection-main {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  min-height: 11.2vw;
-    border-bottom: 1px solid #7e97a7;
+  border-bottom: 1px solid #7e97a7;
 }
-.line_market-selection{
+.line_market-selection {
   width: 63%;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
 }
-.fbm-line_market-item{
+.line_market-selection h4 img {
+  width: 2.6666666667vw;
+  height: 2.6666666667vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.line_market-selection h4 {
+  font-size: 2.9333333333vw;
+  color: #508d0e;
+}
+
+.line_market-selection{
+  font-size: 2.9333333333vw;
+}
+
+.fbm-line_market-item {
   display: flex;
   background-color: #076875;
 }
@@ -802,7 +833,7 @@ td {
   .market-event-container {
     width: 100%;
   }
-  .fbm-container{
+  .fbm-container {
     display: block;
   }
   .Fullmarket-wrap {
@@ -967,10 +998,10 @@ td {
   .headerName {
     font-size: 3.7333333333vw;
   }
-  .fancy-table{
+  .fancy-table {
     display: none;
   }
-  .fancy-table-mobile{
+  .fancy-table-mobile {
     display: block;
   }
 }

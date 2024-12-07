@@ -24,6 +24,7 @@ import Bets_history from "./pages/MyBeat/Bets_history";
 import Profit_loss from "./pages/MyBeat/Profit_loss";
 import MobileNav from "./components/Mobilenav/MobileNav";
 import AuthLogin from "./pages/AuthLogin";
+import Profile from "./pages/Profile";
 
 
 const App = () => {
@@ -61,6 +62,7 @@ const MainApp = () => {
         <Route path="myAccount/bets-history" element={<Bets_history />} />
         <Route path="myAccount/profit-loss" element={<Profit_loss />} />
         <Route path="/login" element={<AuthLogin />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
 
       <MobileNav/>
