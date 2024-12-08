@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/styles/Login.css";
 import loginBg from "../../src/assets/images/KV-pic.png";
 import loginLogin from "../../src/../public/logo.png";
 import { IoMdClose } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const AuthLogin = () => {
+  const navigator = useNavigate();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = () => {
+    if (username && password) {
+      localStorage.setItem("userId", "12345");
+      alert("Login successful!");
+      location.href = "/";
+      setUsername("");
+      setPassword("");
+    } else {
+      alert("Please enter both username and password.");
+    }
+  };
+
   return (
     <>
       <div className="login-container">
@@ -13,26 +29,36 @@ const AuthLogin = () => {
           <img src={loginBg} alt="" />
           <img className="loginLogin" src={loginLogin} alt="" />
           <Link to="/">
-          <div className="login-close">
-            <IoMdClose />
-          </div>
+            <div className="login-close">
+              <IoMdClose />
+            </div>
           </Link>
         </div>
 
         <from>
           <div className="auth-login-from">
             <div className="auth-login-input">
-              <input type="text" placeholder="Username" />
+              <input
+                type="text"
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
             </div>
             <div className="auth-login-input">
-              <input type="password" placeholder="Password" />
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </div>
 
             <div className="auth-login-input">
               <input type="text" placeholder="Validation Code" />
               <span>2504</span>
             </div>
-            <button>Login</button>
+            <button onClick={handleLogin}>Login</button>
           </div>
         </from>
         <div className="login-footer">

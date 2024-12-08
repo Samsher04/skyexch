@@ -16,11 +16,11 @@ function MobileNav() {
 
      <div className="footer2">
 
-     <NavLink to="/promote">
+       <Link to="/promote">
           <div className="footer-box promote">
             <img src={promote} alt="" />
           </div>
-        </NavLink>
+        </Link>
 
        
 
@@ -54,12 +54,12 @@ function MobileNav() {
           </div>
         </NavLink>
 
-        <Link to='profile' >
+        <NavLink to='/profile' >
           <div className="footer-box">
             <img src={user} alt="" />
             <p>Account</p>
           </div>
-        </Link>
+        </NavLink>
 
       </div>
     </div>

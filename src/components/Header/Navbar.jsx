@@ -10,6 +10,8 @@ import { AppContext } from "../../Context/AppContext";
 import { IoMdRefresh } from "react-icons/io";
 import { FaUserAlt } from "react-icons/fa";
 import { RiArrowDownSFill, RiLogoutBoxRLine } from "react-icons/ri";
+import dolat_img from "../../../public/dolar.svg";
+import { IoMdSettings } from "react-icons/io";
 
 const Navbar = () => {
   const { setLoginOpen } = useContext(AppContext);
@@ -17,10 +19,9 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   const handaleToggle = () => {
-    if(menu==false){
+    if (menu == false) {
       setMenu(true);
-    }
-    else{
+    } else {
       setMenu(false);
     }
   };
@@ -47,7 +48,7 @@ const Navbar = () => {
     <div className="navbar">
       {/* Top Navbar */}
       <div className="navbar-top">
-        <div className="logo_search_box">
+        <div className={`logo_search_box ${userId ? `user-logged-in` : ""}`}>
           <div className="navbar-logo">
             <img src={Logo} alt="Logo" className="logo" />
           </div>
@@ -95,7 +96,9 @@ const Navbar = () => {
                         <Link to="/myAccount/summary">Balance Overview</Link>
                       </li>
                       <li>
-                        <Link to="/myAccount/accountCashStatement">Account Statement</Link>
+                        <Link to="/myAccount/accountCashStatement">
+                          Account Statement
+                        </Link>
                       </li>
                       <li>
                         <Link to="/myAccount/current_bets">My Bets</Link>
@@ -149,10 +152,45 @@ const Navbar = () => {
           </div>
         )}
 
-        <div className="mobile-auth-btn">
+        <div className={`mobile-auth-btn ${userId ? `user-logged-in` : ""}`}>
           <Link>Sign up</Link>
-          <Link to="/Login"><FaUser /> Login</Link>
+          <Link to="/Login">
+            <FaUser /> Login
+          </Link>
         </div>
+
+        {/* logged in section */}
+
+        <ul className="li-tv_bet-main">
+          <li className="li-tv_bet">
+            <img src={dolat_img} alt="" />
+            Bets
+          </li>
+          <div className="main-wallet main-wallet-mobile">
+            <a href="">
+             <div>
+             <div>
+                Main
+                <b style={{ marginRight: "4px" }}>IR 0.00</b>
+              </div>
+              <div>
+                Exposure
+                <b style={{ marginRight: "4px" }}>0.00</b>
+              </div>
+             </div>
+              <span>
+                +<b>4</b>
+              </span>
+              <button>
+                <IoMdRefresh />
+              </button>
+            </a>
+          </div>
+          <li className="mobile-setting">
+            <IoMdSettings/>
+          </li>
+        </ul>
+        {/* logged in section */}
       </div>
 
       {/* Bottom Navbar */}
