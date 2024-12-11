@@ -141,7 +141,6 @@ const BookmakMobile = () => {
         <div
           key={index}
           style={{
-
             overflow: "hidden",
           }}
         >
@@ -231,29 +230,28 @@ const BookmakMobile = () => {
                 backgroundColor: "#dceaf4",
                 display: "flex",
                 flexDirection: "column",
-                paddingTop: "2.6666666667vw",
                 borderBottom: "1px solid #7e97a7",
               }}
             >
-              <ul class="btn-list">
+              <ul className="btn-list">
                 <li>
-                  <p class="dynamic-min-bet">&nbsp;</p>
-                  <div id="inputOdds" class="input-num disable">
-                    <span id="odds" class="typed">
+                  <p className="dynamic-min-bet">&nbsp;</p>
+                  <div id="inputOdds" className="input-num disable">
+                    <span id="odds" className="typed">
                       53
                     </span>
                   </div>
                 </li>
                 <li>
-                  <p class="dynamic-min-bet">
+                  <p className="dynamic-min-bet">
                     Min Bet: <strong id="dynamicMinBet"></strong>
                   </p>
-                  <div id="inputStake" class="input-num input-stake">
-                    <a id="stakeDown" class="icon-minus" href="#"></a>
-                    <span id="stake" class="typed typeing">
+                  <div id="inputStake" className="input-num input-stake">
+                    <a id="stakeDown" className="icon-minus" ></a>
+                    <span id="stake" className="typed typeing">
                       72
                     </span>
-                    <a id="stakeUp" class="icon-plus" href="#"></a>
+                    <a id="stakeUp" className="icon-plus" ></a>
                   </div>
                 </li>
               </ul>
@@ -283,8 +281,8 @@ const BookmakMobile = () => {
                 ))}
               </div>
 
-              <div id="keyboard" class="keyboard-wrap">
-                <div id="numPad" class="btn-tel">
+              <div id="keyboard" className="keyboard-wrap">
+                <div id="numPad" className="btn-tel">
                   <li>
                     <button>1</button>
                   </li>
@@ -322,7 +320,7 @@ const BookmakMobile = () => {
                     <button>.</button>
                   </li>
                 </div>
-                <button id="delete" class="btn-delete"></button>
+                <button id="delete" className="btn-delete"></button>
               </div>
 
               <div className="mobile-cls-bet">
