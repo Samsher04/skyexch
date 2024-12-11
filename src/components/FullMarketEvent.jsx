@@ -266,7 +266,7 @@ const FullMarketEvent = () => {
                           ? "active"
                           : ""
                       }`}
-                      onClick={() => handleBackToggle(index)} // Toggle Back Odds
+                      onClick={() => handleBackToggle(index)} 
                       style={{ cursor: "pointer" }}
                     >
                       {team.back.map((odd, i) => (
@@ -285,7 +285,7 @@ const FullMarketEvent = () => {
                           ? "active"
                           : ""
                       }`}
-                      onClick={() => handleLayToggle(index)} // Toggle Lay Odds
+                      onClick={() => handleLayToggle(index)} 
                       style={{ cursor: "pointer" }}
                     >
                       {team.lay.map((odd, i) => (
@@ -368,7 +368,7 @@ const FullMarketEvent = () => {
       </div>
 
       {/* Bookmaker Market mobile Section */}
-      <BookmakMobile />
+        <BookmakMobile />
       {/* Bookmaker Market mobile Section */}
 
       {/* Fancy Bet Section with Tabs */}

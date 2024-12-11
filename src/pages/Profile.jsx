@@ -5,6 +5,7 @@ import { RiLogoutBoxRLine } from "react-icons/ri";
 import { MdArrowForwardIos } from "react-icons/md";
 import profileUser from "../../public/profileUser.svg";
 import Marquee from "../components/Marquee";
+import { toast } from "react-toastify";
 
 const newsItems = [
   {
@@ -22,6 +23,16 @@ const newsItems = [
 ];
 
 function Profile() {
+
+  const handleLogout = () => {
+    localStorage.clear(); 
+    toast.success("Logout successful!");
+    
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 500);
+  };
+  
   return (
     <div>
       <div className="user-main-box">
@@ -35,7 +46,7 @@ function Profile() {
                   <h4>Shamsher</h4>
                   <span>Demo</span>
                 </div>
-                <div className="time-zone">GMT-5:30</div>
+                <div className="time-zone2">GMT-5:30</div>
               </div>
               <ul className="leful User">
                 <li>
@@ -86,7 +97,7 @@ function Profile() {
             </div>
           </div>
           <div className="Account-btn mobile-logout-btn">
-            <button>
+            <button onClick={handleLogout}>
               LOGOUT <RiLogoutBoxRLine />
             </button>
           </div>

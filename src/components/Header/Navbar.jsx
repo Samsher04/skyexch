@@ -161,7 +161,7 @@ const Navbar = () => {
 
         {/* logged in section */}
 
-        <ul className="li-tv_bet-main">
+        <ul className={`li-tv_bet-main ${userId ? `user-logged-in` : ""}`}>
           <li className="li-tv_bet">
             <img src={dolat_img} alt="" />
             Bets

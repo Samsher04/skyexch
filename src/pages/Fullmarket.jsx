@@ -1,10 +1,9 @@
-import React from 'react'
-import Menu_select from '../components/Menu_select'
-import Bet_slip from '../components/Bet_slip'
-import FullMarketEvent from '../components/FullMarketEvent'
+import React from "react";
+import Menu_select from "../components/Menu_select";
+import Bet_slip from "../components/Bet_slip";
+import FullMarketEvent from "../components/FullMarketEvent";
 
 const Fullmarket = () => {
-
   const menuItems = [
     { title: "Sports", isHeader: true },
     { title: "All Sports", isHeader: false },
@@ -27,12 +26,12 @@ const Fullmarket = () => {
   return (
     <div>
       <div className="Fullmarket-wrap">
-      <Menu_select menuItems={menuItems} />
-         <FullMarketEvent />
+        <Menu_select menuItems={menuItems} />
+        <FullMarketEvent />
         <Bet_slip />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Fullmarket
+export default Fullmarket;

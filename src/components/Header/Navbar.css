@@ -442,7 +442,7 @@
     padding: 0px 10px;
     position: fixed;
     top: 0;
-    z-index: 99999;
+    z-index: 100;
     width: 100%;
   }
   .navbar-bottom {
@@ -488,11 +488,15 @@
   }
 
   .li-tv_bet-main {
-    display: flex;
+    display: none;
     align-items: center;
     list-style: none;
     justify-content: space-between;
     width: 100%;
+  }
+
+  .li-tv_bet-main.user-logged-in{
+    display: flex;
   }
 
   .main-wallet-mobile a {

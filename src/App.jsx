@@ -25,10 +25,13 @@ import Profit_loss from "./pages/MyBeat/Profit_loss";
 import MobileNav from "./components/Mobilenav/MobileNav";
 import AuthLogin from "./pages/AuthLogin";
 import Profile from "./pages/Profile";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const App = () => {
   return (
+    
     <AppProvider>
       <MainApp />
     </AppProvider>
@@ -40,6 +43,7 @@ const MainApp = () => {
   
   return (
     <div>
+       <ToastContainer />
       <Navbar />
     
       <Routes>

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import bookmark from "../../public/bookmark.svg";
-import iconChart from "../../public/icon-chart.png";
 import btnaddpin from "../../public/btn-add-pin.png";
-import icon_irun from "../../public/icon-irun.png";
 
 const matchData = {
   matchOdds: [
@@ -32,7 +30,10 @@ const BookmakMobile = () => {
   };
 
   return (
-    <div className="bookmaker-section-mobile" style={{ fontFamily: "Arial, sans-serif" }}>
+    <div
+      className="bookmaker-section-mobile"
+      style={{ fontFamily: "Arial, sans-serif" }}
+    >
       <div className="Bookmaker-Market-head">
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <img className="desktop-bookmark" src={btnaddpin} alt="" />
@@ -63,92 +64,79 @@ const BookmakMobile = () => {
         </div>
       </div>
 
-    
+      <div
+        style={{
+          border: "1px solid #ddd",
+          overflow: "hidden",
+        }}
+      >
         <div
           style={{
-            border: "1px solid #ddd",
-            overflow: "hidden",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            backgroundColor: "#f8f6e1",
+            borderBottom: "1px solid #7e97a7",
+            paddingLeft: "4px",
           }}
         >
           <div
             style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              backgroundColor: "#f8f6e1",
-              borderBottom:"1px solid #7e97a7",
-              paddingLeft:"4px"
+              fontWeight: "bold",
+              fontSize: "4vw",
+              width: "50%",
             }}
-          >
+          ></div>
+
+          <div style={{ display: "flex" }}>
             <div
               style={{
-                fontWeight: "bold",
-                fontSize: "4vw",
-                width: "50%",
+                width: "18.6666666667vw",
+                cursor: "pointer",
+                padding: "0.8vw",
+                textAlign: "center",
               }}
             >
+              <p
+                style={{
+                  borderRadius: "1.0666666667vw",
+
+                  fontSize: "3.4666666667vw",
+                  fontWeight: "bold",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                Back
+              </p>
             </div>
 
-            <div style={{ display: "flex" }}>
-              <div
+            <div
+              style={{
+                width: "18.6666666667vw",
+                cursor: "pointer",
+                padding: "0.8vw",
+                textAlign: "center",
+              }}
+            >
+              <p
                 style={{
-                 
-                  width: "18.6666666667vw",
-                  cursor: "pointer",
-                  padding: "0.8vw",
-                  textAlign: "center",
-                  
-                }}
-              >
-                <p
-                  style={{
-               
-            
-                     borderRadius:"1.0666666667vw",
-                
-                       fontSize:"3.4666666667vw",
-                       fontWeight:"bold",
-                       display:"flex",
-                       alignItems:"center",
-                       justifyContent:"center",
-                       
-                  }}
-                >
-                  Back
-                </p>
-              </div>
+                  borderRadius: "1.0666666667vw",
 
-              <div
-                style={{
-                 
-                  width: "18.6666666667vw",
-                  cursor: "pointer",
-                  padding: "0.8vw",
-                  textAlign: "center",
+                  fontSize: "3.4666666667vw",
+                  fontWeight: "bold",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
-               
               >
-                <p
-                  style={{
-                
-                    borderRadius:"1.0666666667vw",
-                  
-                     fontSize:"3.4666666667vw",
-                      fontWeight:"bold",
-                      display:"flex",
-                      alignItems:"center",
-                      justifyContent:"center",
-                  }}
-                >
-                  Lay
-                </p>
-              </div>
+                Lay
+              </p>
             </div>
           </div>
-
-
         </div>
-   
+      </div>
 
       {matchData.matchOdds.map((team, index) => (
         <div
@@ -164,8 +152,8 @@ const BookmakMobile = () => {
               justifyContent: "space-between",
               alignItems: "center",
               backgroundColor: "#f8f6e1",
-              borderBottom:"1px solid #7e97a7",
-              paddingLeft:"4px"
+              borderBottom: "1px solid #7e97a7",
+              paddingLeft: "4px",
             }}
           >
             <div
@@ -187,7 +175,6 @@ const BookmakMobile = () => {
                   cursor: "pointer",
                   padding: "0.8vw",
                   textAlign: "center",
-                  
                 }}
                 onClick={() => handleToggle(index)}
               >
@@ -195,15 +182,14 @@ const BookmakMobile = () => {
                   style={{
                     backgroundColor: "#72bbef",
                     border: "1px solid #fff",
-                     borderRadius:"1.0666666667vw",
-                     padding:"1.6vw",
-                       fontSize:"3.4666666667vw",
-                       fontWeight:"bold",
-                       minHeight: "11.2vw",
-                       display:"flex",
-                       alignItems:"center",
-                       justifyContent:"center",
-                       
+                    borderRadius: "1.0666666667vw",
+                    padding: "1.6vw",
+                    fontSize: "3.4666666667vw",
+                    fontWeight: "bold",
+                    minHeight: "11.2vw",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   {team.back[2]}
@@ -224,14 +210,14 @@ const BookmakMobile = () => {
                   style={{
                     backgroundColor: "#faa9ba",
                     border: "1px solid #fff",
-                    borderRadius:"1.0666666667vw",
-                     padding:"1.6vw",
-                     fontSize:"3.4666666667vw",
-                      fontWeight:"bold",
-                      minHeight: "11.2vw",
-                      display:"flex",
-                      alignItems:"center",
-                      justifyContent:"center",
+                    borderRadius: "1.0666666667vw",
+                    padding: "1.6vw",
+                    fontSize: "3.4666666667vw",
+                    fontWeight: "bold",
+                    minHeight: "11.2vw",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   {team.lay[0]}
@@ -243,67 +229,42 @@ const BookmakMobile = () => {
           {openMenu === index && (
             <div
               style={{
-                padding: "10px",
-                backgroundColor: "#f0f0f0",
+                backgroundColor: "#dceaf4",
                 display: "flex",
                 flexDirection: "column",
-                gap: "10px",
+                paddingTop: "2.6666666667vw",
+                borderBottom: "1px solid #7e97a7",
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  gap: "10px",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <input
-                  type="checkbox"
-                  id={`acceptOdds-${index}`}
-                  style={{ marginRight: "5px" }}
-                />
-                <label
-                  htmlFor={`acceptOdds-${index}`}
-                  style={{ fontWeight: "400" }}
-                >
-                  Accept Any Odds
-                </label>
-                <div>
-                  <button
-                    style={{
-                      backgroundColor: "#ddd",
-                      border: "none",
-                      padding: "5px 10px",
-                      borderRadius: "4px",
-                      marginRight: "5px",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => setOpenMenu(null)}
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    style={{
-                      backgroundColor: "#4caf50",
-                      color: "#fff",
-                      border: "none",
-                      padding: "5px 10px",
-                      borderRadius: "4px",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Place Bets
-                  </button>
-                </div>
-              </div>
+              <ul class="btn-list">
+                <li>
+                  <p class="dynamic-min-bet">&nbsp;</p>
+                  <div id="inputOdds" class="input-num disable">
+                    <span id="odds" class="typed">
+                      53
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <p class="dynamic-min-bet">
+                    Min Bet: <strong id="dynamicMinBet"></strong>
+                  </p>
+                  <div id="inputStake" class="input-num input-stake">
+                    <a id="stakeDown" class="icon-minus" href="#"></a>
+                    <span id="stake" class="typed typeing">
+                      72
+                    </span>
+                    <a id="stakeUp" class="icon-plus" href="#"></a>
+                  </div>
+                </li>
+              </ul>
 
               <div
                 style={{
                   display: "flex",
-                  gap: "10px",
                   justifyContent: "space-between",
                 }}
+                className="coin-list"
               >
                 {["4", "30", "50", "200", "500", "1000"].map((value, i) => (
                   <button
@@ -321,6 +282,58 @@ const BookmakMobile = () => {
                     {value}
                   </button>
                 ))}
+              </div>
+
+              <div id="keyboard" class="keyboard-wrap">
+                <div id="numPad" class="btn-tel">
+                  <li>
+                    <button>1</button>
+                  </li>
+                  <li>
+                    <button>2</button>
+                  </li>
+                  <li>
+                    <button>3</button>
+                  </li>
+                  <li>
+                    <button>4</button>
+                  </li>
+                  <li>
+                    <button>5</button>
+                  </li>
+                  <li>
+                    <button>6</button>
+                  </li>
+                  <li>
+                    <button>7</button>
+                  </li>
+                  <li>
+                    <button>8</button>
+                  </li>
+                  <li>
+                    <button>9</button>
+                  </li>
+                  <li>
+                    <button>0</button>
+                  </li>
+                  <li>
+                    <button>00</button>
+                  </li>
+                  <li>
+                    <button>.</button>
+                  </li>
+                </div>
+                <button id="delete" class="btn-delete"></button>
+              </div>
+
+              <div className="mobile-cls-bet">
+                <button onClick={() => setOpenMenu(null)}>Cancel</button>
+                <button>Place Bets</button>
+              </div>
+
+              <div className="bet-setting-box">
+                  <input type="checkbox" name="" id="" />
+                  <label htmlFor="">Accept Any Odds</label>
               </div>
             </div>
           )}
