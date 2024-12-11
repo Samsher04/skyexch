@@ -66,7 +66,6 @@ const BookmakMobile = () => {
 
       <div
         style={{
-          border: "1px solid #ddd",
           overflow: "hidden",
         }}
       >
@@ -142,7 +141,7 @@ const BookmakMobile = () => {
         <div
           key={index}
           style={{
-            border: "1px solid #ddd",
+
             overflow: "hidden",
           }}
         >
